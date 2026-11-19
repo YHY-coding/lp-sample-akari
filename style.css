@@ -1,0 +1,56 @@
+:root{
+  --bg:#f6f2ea; --bg2:#ece6d9; --ink:#2b2a27; --sub:#6b665c;
+  --green:#2f4a3c; --line:#d4ccbb;
+  --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.9;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.sample-bar{background:var(--ink);color:#f6f2ea;font-size:12px;line-height:1.6;padding:6px 16px;text-align:center}
+.site-head{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(246,242,234,.95);z-index:5}
+.logo{font-family:var(--serif);font-size:22px;text-decoration:none;letter-spacing:.1em}
+.logo small{font-family:var(--sans);font-size:10px;letter-spacing:.15em;color:var(--sub);margin-left:4px}
+.site-head nav{display:flex;gap:14px;font-size:13px}
+.site-head nav a{text-decoration:none;color:var(--sub)}
+.hero{position:relative;padding:72px 24px 48px;max-width:960px;margin:0 auto;overflow:hidden}
+.eyebrow{font-size:13px;letter-spacing:.12em;color:var(--green);margin:0 0 20px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(36px,9vw,64px);line-height:1.35;margin:0 0 24px;letter-spacing:.04em}
+.lead{color:var(--sub);margin:0 0 36px;max-width:28em}
+.btn{display:inline-block;background:var(--green);color:#f6f2ea;text-decoration:none;padding:16px 36px;font-size:16px;letter-spacing:.08em;min-height:48px}
+.btn.light{background:#f6f2ea;color:var(--green)}
+.btn.ghost{background:transparent;color:#f6f2ea;border:1px solid #f6f2ea;margin-left:8px}
+.hero-art{position:absolute;right:-30px;top:40px;width:220px;color:var(--green);opacity:.18;pointer-events:none}
+.sec{padding:64px 24px}
+.sec>*{max-width:720px;margin-left:auto;margin-right:auto}
+.alt{background:var(--bg2)}
+h2{font-family:var(--serif);font-weight:500;font-size:26px;margin:0 auto 28px;letter-spacing:.06em}
+.num{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.2em;color:var(--green);margin-bottom:4px}
+.promises{list-style:none;padding:0;margin:0 auto}
+.promises li{padding:20px 0;border-top:1px solid var(--line)}
+.promises li:last-child{border-bottom:1px solid var(--line)}
+.promises b{display:block;font-family:var(--serif);font-size:20px;font-weight:500}
+.promises span{color:var(--sub);font-size:15px}
+.note,.small{font-size:14px;color:var(--sub);line-height:1.8}
+.menu{width:100%;border-collapse:collapse;margin:8px auto 16px}
+.menu th,.menu td{padding:16px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
+.menu td{text-align:right;font-family:var(--serif);font-size:20px;white-space:nowrap}
+.steps{list-style:none;counter-reset:s;padding:0;margin:0 auto}
+.steps li{counter-increment:s;position:relative;padding:0 0 24px 52px;color:var(--sub);font-size:15px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border:1px solid var(--green);color:var(--green);display:grid;place-items:center;font-family:var(--serif)}
+.steps b{display:block;color:var(--ink);font-size:17px}
+.ph{height:220px;background:repeating-linear-gradient(45deg,#e1d9c8,#e1d9c8 10px,#e8e1d1 10px,#e8e1d1 20px);display:grid;place-items:center;color:var(--sub);font-size:14px;margin-bottom:12px}
+details{border-top:1px solid var(--line);padding:4px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:14px 0;min-height:48px;font-family:var(--serif);font-size:18px}
+details p{margin:0 0 16px;color:var(--sub);font-size:15px}
+.info{display:grid;grid-template-columns:7em 1fr;gap:10px 12px;margin-top:0;margin-bottom:0}
+.info dt{color:var(--sub);font-size:14px}.info dd{margin:0}
+.cta{background:var(--green);color:#f6f2ea;text-align:center}
+.cta h2,.cta .num{color:#f6f2ea}
+.cta .btn{margin:8px 4px}
+footer{padding:32px 24px;text-align:center;font-size:13px;color:var(--sub)}
+footer p{margin:4px 0}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+@media(max-width:480px){.site-head nav{gap:10px;font-size:12px}.hero{padding-top:48px}.btn.ghost{margin-left:0}.hero-art{width:160px;top:20px}}
